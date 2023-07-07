@@ -40,7 +40,6 @@ class ImagePublisher(Node):
     self.cap.set(4, 480)
     # Used to convert between ROS and OpenCV images
     self.br = CvBridge()
-    #test
 
 
   def timer_callback(self):
