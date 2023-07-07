@@ -34,7 +34,7 @@ class YoloNode(Node):
     # ----------------------------------------------------------
 
     classes_dir = os.path.expanduser("~/Group1/src/ground_robot/ground_robot/yolov3.txt")
-    weights_dir = os.path.expanduser("~/Group1/src/ground_robot/ground_robot/yolov3.weights")
+    weights_dir = os.path.expanduser("~/Group1/src/ground_robot/ground_robot/yolov3.weights") # Download from drive, too big for git!
     config_dir = os.path.expanduser("~/Group1/src/ground_robot/ground_robot/yolov3.cfg")
 
     classes = None
