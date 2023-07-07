@@ -33,9 +33,9 @@ class ImageSubscriber(Node):
 
     # ----------------------------------------------------------
 
-    classes_dir = r"/home/will/ros2_ws/src/cv_basics/cv_basics/yolov3.txt"
-    weights_dir = r"/home/will/ros2_ws/src/cv_basics/cv_basics/yolov3.weights"
-    config_dir = r"/home/will/ros2_ws/src/cv_basics/cv_basics/yolov3.cfg"
+    classes_dir = "~/Group1/src/ground_robot/ground_robot/yolov3.txt"
+    weights_dir = "~/Group1/src/ground_robot/ground_robot/yolov3.weights"
+    config_dir = "~/Group1/src/ground_robot/ground_robot/yolov3.cfg"
 
     classes = None
 
