@@ -7,8 +7,9 @@ import cv2 # OpenCV library
 
 from cv2 import aruco
 import numpy as np
- 
-class ImageSubscriber(Node):
+import os
+
+class YoloNode(Node):
   """
   Create an ImageSubscriber class, which is a subclass of the Node class.
   """
@@ -33,9 +34,9 @@ class ImageSubscriber(Node):
 
     # ----------------------------------------------------------
 
-    classes_dir = "~/Group1/src/ground_robot/ground_robot/yolov3.txt"
-    weights_dir = "~/Group1/src/ground_robot/ground_robot/yolov3.weights"
-    config_dir = "~/Group1/src/ground_robot/ground_robot/yolov3.cfg"
+    classes_dir = os.path.expanduser("~/Group1/src/ground_robot/ground_robot/yolov3.txt")
+    weights_dir = os.path.expanduser("~/Group1/src/ground_robot/ground_robot/yolov3.weights")
+    config_dir = os.path.expanduser("~/Group1/src/ground_robot/ground_robot/yolov3.cfg")
 
     classes = None
 
@@ -147,7 +148,7 @@ def main(args=None):
   rclpy.init(args=args)
   
   # Create the node
-  image_subscriber = ImageSubscriber()
+  image_subscriber = YoloNode()
   
   # Spin the node so the callback function is called.
   rclpy.spin(image_subscriber)
