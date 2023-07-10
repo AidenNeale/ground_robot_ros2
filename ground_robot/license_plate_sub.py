@@ -106,7 +106,7 @@ class ImageSubscriber(Node):
             if 'york' in text.lower():
 
                 # print("License plate detected, number is:",text)
-                cv2.drawContours(img, [screenCnt], -1, (0, 0, 255), 3)
+                cv2.drawContours(img, [screenCnt], -1, (0, 255, 0), 3)
                 self.get_logger().info(f"License plate detected, number is:{text}")
                 
                 # Display results
