@@ -9,7 +9,7 @@ import imutils
 import numpy as np
 import pytesseract
  
-class ImageSubscriber(Node):
+class PlateNode(Node):
   """
   Create an ImageSubscriber class, which is a subclass of the Node class.
   """
@@ -18,7 +18,7 @@ class ImageSubscriber(Node):
     Class constructor to set up the node
     """
     # Initiate the Node class's constructor and give it a name
-    super().__init__('image_subscriber')
+    super().__init__('plate_subs')
       
     # Create the subscriber. This subscriber will receive an Image
     # from the video_frames topic. The queue size is 10 messages.
@@ -132,15 +132,15 @@ def main(args=None):
   rclpy.init(args=args)
   
   # Create the node
-  image_subscriber = ImageSubscriber()
+  plate_subs = PlateNode()
   
   # Spin the node so the callback function is called.
-  rclpy.spin(image_subscriber)
+  rclpy.spin(plate_subs)
   
   # Destroy the node explicitly
   # (optional - otherwise it will be done automatically
   # when the garbage collector destroys the node object)
-  image_subscriber.destroy_node()
+  plate_subs.destroy_node()
   
   # Shutdown the ROS client library for Python
   rclpy.shutdown()
