@@ -36,7 +36,12 @@ class ArucoNode(Node):
     dictionary = aruco.getPredefinedDictionary(aruco.DICT_4X4_250)
     parameters =  aruco.DetectorParameters()
     self.detector_aruco = aruco.ArucoDetector(dictionary, parameters)
-    
+
+    # Publisher
+
+    # Add custom msg -> self.publisher_aruco_coords = self.create_publisher(????, 'frame', 10)
+
+
   def listener_callback(self, data):
     """
     Callback function.
